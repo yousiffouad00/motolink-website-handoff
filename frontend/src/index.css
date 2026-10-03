@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-motolink-blue: #1e4fd8;
+  --color-motolink-blue-dark: #0b1b4d;
+  --color-motolink-blue-light: #eaf0ff;
+  --color-motolink-slate: #5b6472;
+
+  --font-display: "Rajdhani", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-motolink-blue-dark);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Top loading bar shown during route/loader transitions (see components/Layout.jsx) */
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.animate-loading-bar {
+  animation: loading-bar 1s ease-in-out infinite;
+}
